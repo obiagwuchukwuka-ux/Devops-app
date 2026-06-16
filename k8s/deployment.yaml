@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-next-starter
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-next-starter
+  template:
+    metadata:
+      labels:
+        app: devops-next-starter
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/YOUR_GITHUB_USERNAME/devops-next-starter:latest
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 20
