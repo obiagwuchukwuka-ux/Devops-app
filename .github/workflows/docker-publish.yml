@@ -28,5 +28,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/obiagwuchukwu-ux/devops-app:latest
-            ghcr.io/obiagwuchukwu-ux/devops-app:${{ github.sha }}
+            ghcr.io/${{ github.actor }}/devops-app:latest
+            ghcr.io/${{ github.actor }}/devops-app:${{ github.sha }}
