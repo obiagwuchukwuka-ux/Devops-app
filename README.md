@@ -1,8 +1,8 @@
 # DevOps Next Starter
 
-A simple production-style Next.js website created for hands-on DevOps practice.
+A production-style DevOps deployment project demonstrating containerization, CI/CD automation, and cloud deployment of a Next.js application using Docker, GitHub Actions, Nginx, and AWS.
 
-## What you will practice
+## Here is a system I designed, automated, deployed, tested, and maintained.
 
 - Git branching and pull requests
 - Local development
